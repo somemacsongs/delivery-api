@@ -13,5 +13,6 @@ app.use(express.json());
 // CONFIGUREM O SEUS ROTEADORES AQUI!
 
 app.listen(Number(process.env.PORT), () => {
-  console.log(`Server up at port ${process.env.PORT}`);
+  console.log(`Server running at port ${process.env.PORT}`);
 });
+
