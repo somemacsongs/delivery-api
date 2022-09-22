@@ -5,7 +5,6 @@ import { orderRouter } from "./routes/order.routes.js"
 
 dotenv.config();
 dbConnect();
-
 const app = express();
 
 app.use(express.json());
