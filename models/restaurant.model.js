@@ -8,7 +8,9 @@ const restaurantSchema = new Schema({
         enum: ["Italiana", "Japonesa", "Árabe", "Brasileira", "Doces & Bolos", "Mexicana", "Outro"],
         required: true,
     },
-    acceptsRetirada: {type: Boolean, required: true},
+    meals: [{ type: Types.ObjectId, ref: "Meal" }],
+    order: [{ type: Types.ObjectId, ref: "Order" }],
+    acceptsRetirada: {type: Boolean, required: true}
 });
 
 const RestaurantModel = model("Restaurant", restaurantSchema);
